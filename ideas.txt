@@ -1,0 +1,41 @@
+Para combinar facilmente Qt Designe e Python:
+
+python -m venv venv
+
+call venv\Scripts\active.bat no windows
+
+pip -m pip install PyQt5
+
+
+
+============
+Message Box
+============
+
+QMessageBox.about (self, "Title" , "Message" )
+
+msg.setIcon (QMessageBox.Information) 
+msg.setIcon (QMessageBox.Question) 
+msg.setIcon (QMessageBox.Warning) 
+msg.setIcon (QMessageBox.Critical)
+
+Ele vem com toda uma gama de botões:
+
+msg.setStandardButtons (QMessageBox.Ok | QMessageBox.Cancel)
+
+QMessageBox.Ok
+QMessageBox.Open
+QMessageBox.Save
+QMessageBox.Cancel
+QMessageBox.Close
+QMessageBox.Yes
+QMessageBox.No
+QMessageBox.Abort
+QMessageBox.Retry
+QMessageBox.Ignore
+
+
+ret = QMessageBox.question (self, 'MessageBox' , "Clique em um botão" , QMessageBox.Yes | QMessageBox.No | QMessageBox.Cancel, QMessageBox.Cancel)
+
+if ret == QMessageBox.Yes: 
+    print ( 'Button QMessageBox.Yes clicou.' )
